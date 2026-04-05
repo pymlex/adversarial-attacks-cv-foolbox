@@ -20,7 +20,7 @@ The notebook uses the CUB-200-2011 dataset, which contains 11.8k images of 200 b
 
 ## Model
 
-The model is based on ResNet-18 and was fine-tuned on CUB-200-2011, achieving 73% accuracy on the held-out test set. The entire training process was conducted on a T4 GPU with 16 GB VRAM in Google Colab.
+The model is based on ResNet-18 and was fine-tuned on CUB-200-2011, achieving 73% accuracy on the held-out test set. The entire training process was conducted on a T4 GPU with 15 GB VRAM in Google Colab.
 
 ## Benign and adversarial accuracy
 
