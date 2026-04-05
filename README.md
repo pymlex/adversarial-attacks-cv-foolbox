@@ -38,7 +38,7 @@ Here, $x_i^{\text{adv}}$ is the adversarially perturbed version of the original 
 
 Projected Gradient Descent is the main white-box attack used in the notebook. It repeatedly updates the input in the direction of the loss gradient and projects the result back into the allowed $\varepsilon$-ball:
 
-$$x_{t+1} = \Pi_{x+\mathcal{S}}\Bigl(x_t + \alpha \cdot \operatorname{sign}\bigl(\nabla_{x_t} L(\theta, x_t, y)\bigr)\Bigr)$$
+$$x_{t+1} = \Pi_{x+\mathcal{S}}\Bigl(x_t + \alpha \cdot \text{sign}\bigl(\nabla_{x_t} L(\theta, x_t, y)\bigr)\Bigr)$$ 
 
 On the holdout subset, the baseline model drops sharply under PGD, which confirms that standard fine-tuning alone is not enough to make the classifier robust. The adversarial nose remains invisible for human's eye:
 
@@ -48,7 +48,7 @@ On the holdout subset, the baseline model drops sharply under PGD, which confirm
 
 Boundary Attack is a decision-based black-box attack. It starts from an adversarial point and then moves along the decision boundary while keeping the input adversarial:
 
-$$x_{t+1} = \operatorname{proj}\bigl(x_t + \eta \cdot \vec{d}\bigr) \quad \text{s.t.} \quad f(x_{t+1}) \neq f(x)$$
+$$x_{t+1} = \text{proj}\bigl(x_t + \eta \cdot \vec{d}\bigr) \quad \text{s.t.} \quad f(x_{t+1}) \neq f(x)$$ 
 
 Unlike PGD, the perturbations are not constrained by a simple gradient step, so the attacked images remain visually meaningful while the added noise is still visible:
 
@@ -58,7 +58,7 @@ Unlike PGD, the perturbations are not constrained by a simple gradient step, so 
 
 Fast Gradient Sign Method is the one-step version of the gradient-based attack family:
 
-$$x_{\text{adv}} = x + \varepsilon \cdot \operatorname{sign}\bigl(\nabla_x L(\theta, x, y)\bigr)$$
+$$x_{\text{adv}} = x + \varepsilon \cdot \text{sign}\bigl(\nabla_x L(\theta, x, y)\bigr)$$ 
 
 We compare baseline model and the adversarially trained model on the same FGSM sweep. The baseline curve drops much earlier, while the adversarially trained model stays stable for noticeably larger values of $\varepsilon$. 
 
