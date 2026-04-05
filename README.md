@@ -8,10 +8,7 @@ This material was prepared as part of a study on data poisoning at Central Unive
 
 - CUB-200-2011 data loading and holdout split
 - ResNet18 fine-tuning on bird species classification
-- Foolbox evaluation with:
-  - PGD
-  - Boundary Attack
-  - FGSM
+- Foolbox evaluation with PGD, Boundary Attack, and FGSM
 - Adversarial training with a lightweight PGD inner loop
 - Randomized smoothing experiments
 - Benign and adversarial accuracy reporting
