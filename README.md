@@ -42,7 +42,7 @@ $$x_{t+1} = \Pi_{x+\mathcal{S}}\Bigl(x_t + \alpha \cdot \text{sign}\bigl(\nabla_
 
 On the holdout subset, the baseline model drops sharply under PGD, which confirms that standard fine-tuning alone is not enough to make the classifier robust. The adversarial nose remains invisible for human's eye:
 
-<img width="449" height="300" alt="Untitled" src="https://github.com/user-attachments/assets/cca7d044-c91c-47cf-a5c8-7888f4bbb153" />
+<img width="733" height="490" alt="image" src="https://github.com/user-attachments/assets/83418bc4-f9ed-402c-b029-1386d1b8f70f" />
 
 ## Boundary attack
 
@@ -62,7 +62,7 @@ $$x_{\text{adv}} = x + \varepsilon \cdot \text{sign}\bigl(\nabla_x L(\theta, x, 
 
 We compare baseline model and the adversarially trained model on the same FGSM sweep. The baseline curve drops much earlier, while the adversarially trained model stays stable for noticeably larger values of $\varepsilon$. 
 
-<img width="529" height="350" alt="Untitled" src="https://github.com/user-attachments/assets/0b86e197-e409-46b4-8d91-afefaa96413f" />
+<img width="710" height="470" alt="image" src="https://github.com/user-attachments/assets/9a226da7-595e-41d7-b364-7faf1535cd4e" />
 
 ## Randomized smoothing
 
@@ -73,4 +73,4 @@ $$g(x) = \arg\max_{c \in \mathcal{Y}} \mathbb{P}(f(x + \varepsilon) = c),
 
 The adversarially trained model stays more stable as $\sigma$ grows, while the baseline degrades much faster. It is a sanity check to compare the models' robustness to noise.
 
-<img width="515" height="350" alt="Untitled" src="https://github.com/user-attachments/assets/b37e7b37-bcc3-40a2-90c7-d544b6058a89" />
+<img width="691" height="470" alt="image" src="https://github.com/user-attachments/assets/aec73803-146f-4213-80bf-d713d46fd397" />
