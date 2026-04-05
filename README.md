@@ -1,7 +1,5 @@
 # Adversarial Attacks for CV Models with Foolbox
 
-PyTorch notebook for adversarial robustness experiments on image classification models.
-
 ## Overview
 
 This material was prepared as part of a study on data poisoning at Central University, under the mentorship of experts from AIRI Safe AI. The notebook includes:
